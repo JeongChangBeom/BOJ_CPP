@@ -15,7 +15,6 @@ int Find_Set(int x) {
 		return x;
 	}
 	else {
-		//return Find_Set(p[x]); <- 시간초과
 		return p[x] = Find_Set(p[x]);
 	}
 }
