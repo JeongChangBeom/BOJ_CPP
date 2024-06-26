@@ -29,7 +29,6 @@ int main() {
 		int mid = (start + end) / 2;
 		int count = 1;
 		int money = mid;
-		bool check = false;
 
 		for (int i = 0; i < N; i++) {
 			if (v[i] > mid) {
