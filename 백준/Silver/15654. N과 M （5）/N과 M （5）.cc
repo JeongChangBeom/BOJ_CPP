@@ -13,7 +13,7 @@ bool visited[9];
 
 int N, M;
 
-void DFS(int v, int num) {
+void DFS(int v) {
 	if (v == M) {
 		for (int i = 0; i < M; i++) {
 			cout << arr[i] << " ";
@@ -26,7 +26,7 @@ void DFS(int v, int num) {
 		if (!visited[i]) {
 			visited[i] = true;
 			arr[v] = result[i];
-			DFS(v + 1, i + 0);
+			DFS(v + 1);
 			visited[i] = false;
 		}
 	}
@@ -41,5 +41,5 @@ int main() {
 
 	sort(result, result + N);
 
-	DFS(0, 1);
+	DFS(0);
 }
